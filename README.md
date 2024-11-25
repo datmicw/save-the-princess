@@ -57,4 +57,3 @@
 ```bash
 git clone https://github.com/username/save-the-princess.git
 ```
-- Or download the game build from [Release](https://github.com/username/save-the-princess/releases).
