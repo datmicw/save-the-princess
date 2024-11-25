@@ -55,5 +55,5 @@
 1. **Download**:
 - Clone the repository:
 ```bash
-git clone https://github.com/username/save-the-princess.git
+git clone https://github.com/datmicw/save-the-princess.git
 ```
