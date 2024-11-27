@@ -1,72 +1,67 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MovementPlayer : MonoBehaviour
 {
     public float laneDistance = 3f; // Khoảng cách giữa các làn đường
     public float moveSpeed = 10f;  // Tốc độ di chuyển
-    private int currentLane = 0; // Lane giữa (làn đường -1, 0, 1)
-    private Rigidbody rb; // RigidBody của nhân vật
-    public float JumpForce = 5f; // Lực nhảy
+    private int currentLane = 0;   // Làn đường hiện tại (-1, 0, 1)
+    private Rigidbody rb;          // RigidBody của nhân vật
+    public float jumpForce = 5f;   // Lực nhảy
     private bool isDragging = false; // Trạng thái kéo chuột
-    public bool isGrounded = true; // Trạng thái đang đứng trên mặt đất
-
+    private bool isGrounded = true;  // Trạng thái đang đứng trên mặt đất
 
     private Vector2 startTouchPosition; // Vị trí bắt đầu kéo chuột
     private Vector2 currentTouchPosition; // Vị trí hiện tại kéo chuột
+
     private Vector3 targetPosition; // Vị trí mục tiêu
 
     void Start()
     {
         rb = GetComponent<Rigidbody>(); // Lấy RigidBody của nhân vật
-        targetPosition = transform.position; // Vị trí mục tiêu ban đầu
+        targetPosition = transform.position; // Thiết lập vị trí ban đầu
     }
 
     void Update()
     {
         HandleSwipe();
 
-        // Cập nhật vị trí nhân vật
-        targetPosition = new Vector3(
-            currentLane * laneDistance, // Làn đường
-            transform.position.y, // Vị trí y không đổi
-            transform.position.z); // Vị trí mục tiêu
-        transform.position = Vector3.Lerp(
-            transform.position, // Vị trí hiện tại
-            targetPosition, // Vị trí mục tiêu
-            moveSpeed * Time.deltaTime); // Di chuyển nhân vật đến vị trí mục tiêu
+        // Di chuyển nhân vật đến vị trí mục tiêu
+        Vector3 desiredPosition = new Vector3(
+            currentLane * laneDistance, // Xác định vị trí theo làn đường
+            rb.position.y,             // Giữ nguyên độ cao
+            rb.position.z);            // Tiến lên phía trước
+        rb.MovePosition(Vector3.MoveTowards(rb.position, desiredPosition, moveSpeed * Time.deltaTime));
     }
 
     void HandleSwipe()
     {
         if (Input.GetMouseButtonDown(0)) // Khi nhấn chuột
         {
-            isDragging = true; // Bắt đầu kéo chuột
-            startTouchPosition = Input.mousePosition; // Lấy vị trí bắt đầu kéo chuột
+            isDragging = true;
+            startTouchPosition = Input.mousePosition; // Lấy vị trí bắt đầu kéo
         }
         else if (Input.GetMouseButton(0) && isDragging) // Khi kéo chuột
         {
-            currentTouchPosition = Input.mousePosition; // Lấy vị trí hiện tại kéo chuột
-            Vector2 difference = currentTouchPosition - startTouchPosition; // Khoảng cách giữa vị trí hiện tại và vị trí bắt đầu kéo chuột
+            currentTouchPosition = Input.mousePosition; // Cập nhật vị trí kéo hiện tại
+            Vector2 difference = currentTouchPosition - startTouchPosition;
 
-            // Kéo theo chiều ngang để đổi làn
-            if (Mathf.Abs(difference.x) > Mathf.Abs(difference.y)) // Kéo theo chiều ngang
+            // Đổi làn nếu kéo ngang
+            if (Mathf.Abs(difference.x) > Mathf.Abs(difference.y)) // Kéo ngang
             {
-                if (difference.x > 50 && currentLane < 1) // Kéo sang phải
+                if (difference.x > 50 && currentLane < 1) // Sang phải
                 {
                     currentLane++;
                     ResetSwipe();
                 }
-                else if (difference.x < -50 && currentLane > -1) // Kéo sang trái
+                else if (difference.x < -50 && currentLane > -1) // Sang trái
                 {
-                    currentLane--; // Đổi làn
-                    ResetSwipe(); // Reset trạng thái kéo chuột
+                    currentLane--;
+                    ResetSwipe();
                 }
             }
-            // Kéo lên để nhảy
-            else if (difference.y > 50) // Chỉ quan tâm kéo lên
+            // Nhảy nếu kéo lên
+            else if (difference.y > 30) // Kéo lên
             {
                 Jump();
                 ResetSwipe();
@@ -78,29 +73,41 @@ public class MovementPlayer : MonoBehaviour
         }
     }
 
-    void ResetSwipe() // Reset trạng thái kéo chuột
+    void ResetSwipe()
     {
         isDragging = false;
-        startTouchPosition = Vector2.zero; // Reset vị trí bắt đầu kéo chuột
-        currentTouchPosition = Vector2.zero; // Reset vị trí hiện tại kéo chuột
+        startTouchPosition = Vector2.zero;
+        currentTouchPosition = Vector2.zero;
     }
+
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Ground")
+        // Nếu va chạm với mặt đất hoặc tàu
+        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Train"))
         {
             isGrounded = true;
         }
     }
+
+    void OnCollisionExit(Collision collision)
+    {
+        // Khi rời khỏi mặt đất hoặc tàu
+        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Train"))
+        {
+            isGrounded = false;
+        }
+    }
+
     void Jump()
     {
-       if(isGrounded == true)
+        if (isGrounded)
         {
-            rb.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isGrounded = false;
         }
         else
         {
-            Debug.Log("Can not Jumb");
+            Debug.Log("Cannot Jump: Not Grounded");
         }
     }
 }

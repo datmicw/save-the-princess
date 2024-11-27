@@ -7,8 +7,8 @@
       "RelativeMoniker": "D:0:0:{B5F8EB77-25D6-8DA2-3548-50EC348A55FD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\movementplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B5F8EB77-25D6-8DA2-3548-50EC348A55FD}|Assembly-CSharp.csproj|E:\\save-the-princess\\assets\\scripts\\camerafollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5F8EB77-25D6-8DA2-3548-50EC348A55FD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\camerafollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B5F8EB77-25D6-8DA2-3548-50EC348A55FD}|Assembly-CSharp.csproj|e:\\save-the-princess\\assets\\scripts\\maprun.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5F8EB77-25D6-8DA2-3548-50EC348A55FD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\maprun.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,20 +18,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CameraFollow.cs",
-              "DocumentMoniker": "E:\\save-the-princess\\Assets\\Scripts\\CameraFollow.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\CameraFollow.cs",
-              "ToolTip": "E:\\save-the-princess\\Assets\\Scripts\\CameraFollow.cs",
-              "RelativeToolTip": "Assets\\Scripts\\CameraFollow.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T03:08:57.513Z"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -40,9 +28,22 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\MovementPlayer.cs",
               "ToolTip": "E:\\save-the-princess\\Assets\\Scripts\\MovementPlayer.cs",
               "RelativeToolTip": "Assets\\Scripts\\MovementPlayer.cs",
-              "ViewState": "AgIAAFAAAAAAAAAAAADwv2IAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAowF8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T17:02:01.124Z",
+              "WhenOpened": "2024-11-27T08:06:55.522Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MapRun.cs",
+              "DocumentMoniker": "E:\\save-the-princess\\Assets\\Scripts\\MapRun.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\MapRun.cs",
+              "ToolTip": "E:\\save-the-princess\\Assets\\Scripts\\MapRun.cs",
+              "RelativeToolTip": "Assets\\Scripts\\MapRun.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T08:04:14.633Z",
               "EditorCaption": ""
             }
           ]
