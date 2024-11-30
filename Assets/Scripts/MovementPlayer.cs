@@ -105,7 +105,7 @@ public class MovementPlayer : MonoBehaviour
             isGrounded = true;
         }
 
-        if (collision.gameObject.CompareTag("TrainFront"))
+        if (collision.gameObject.CompareTag("TrainFront") || collision.gameObject.CompareTag("Barie"))
         {
             Debug.Log("Game Over!");
             StopMapRun();
