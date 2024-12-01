@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 37
+  controlID: 36
   draggingID: 0
 --- !u!114 &3
 MonoBehaviour:
@@ -224,7 +224,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 38
+  controlID: 37
   draggingID: 0
 --- !u!114 &10
 MonoBehaviour:
@@ -250,7 +250,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 39
+  controlID: 38
   draggingID: 0
 --- !u!114 &11
 MonoBehaviour:
@@ -278,7 +278,7 @@ MonoBehaviour:
   - {fileID: 15}
   - {fileID: 17}
   m_Selected: 1
-  m_LastSelected: 0
+  m_LastSelected: 1
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -324,7 +324,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -332,16 +332,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 82
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Scenes
   m_LastFoldersGridSize: 82
   m_LastProjectPath: E:\save-the-princess
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: 62790000
-    m_LastClickedID: 31074
-    m_ExpandedIDs: 000000008e5d0000905d0000925d000000ca9a3bffffff7f
+    m_SelectedIDs: f85a0000
+    m_LastClickedID: 23288
+    m_ExpandedIDs: 00000000e45a0000e65a0000e85a0000fc5a0000fe5a0000485b0000505b0000585b00006e5b0000306b0000326b0000366b0000386b00003a6b000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -369,7 +369,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000008e5d0000905d0000925d0000
+    m_ExpandedIDs: 00000000e45a0000e65a0000e85a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -511,21 +511,21 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 2e2affff28fbffff785c0000
+      m_ExpandedIDs: 1426feff4e3bfeffb242feffb049feff2e52feff4459feff0062feffb678feffd88cfeff9e8dfeff2094feffa494feff709dfeff30e4feff50f3feffc64dffffd481ffff5a8affff60b6ffff84daffff9ee0ffff1ce8ffff0efaffff26faffff28fbffff8a6a00009a6a0000026b0000eefe0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: Player
+        m_OriginalName: Player
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: 66864
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 4}
       m_SearchString: 
@@ -555,8 +555,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 202.40001
-    y: 73.6
+    x: 203.4
+    y: 19
     width: 995.6
     height: 517.4
   m_SerializedDataModeController:
@@ -891,9 +891,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -3.1128654, y: 0.8925413, z: 176.4953}
+    m_Target: {x: 649.106, y: 1304.0697, z: 3.3656595}
     speed: 2
-    m_Value: {x: -3.1128654, y: 0.8925413, z: 176.4953}
+    m_Value: {x: 649.106, y: 1304.0697, z: 3.3656595}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -939,13 +939,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.1488005, y: -0.750584, z: 0.19085942, w: -0.61600816}
+    m_Target: {x: 0.2979623, y: 0.21386021, z: -0.072435014, w: 0.92831737}
     speed: 2
-    m_Value: {x: -0.14869562, y: -0.75005496, z: 0.1907249, w: -0.61557394}
+    m_Value: {x: 0.2977335, y: 0.21369597, z: -0.07237939, w: 0.92760444}
   m_Size:
-    m_Target: 1.5101151
+    m_Target: 195.05643
     speed: 2
-    m_Value: 1.5101151
+    m_Value: 195.05643
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1041,7 +1041,7 @@ MonoBehaviour:
   m_SerializedViewNames:
   - UnityEditor.GameView
   m_SerializedViewValues:
-  - E:\save-the-princess\Library\PlayModeViewStates\38d5700cdea684d448ae84155487fde4
+  - E:\save-the-princess\Library\PlayModeViewStates\8233801679bf8144c8569bce7f495081
   m_PlayModeViewName: Device Simulator
   m_ShowGizmos: 0
   m_TargetDisplay: 0
@@ -1062,8 +1062,8 @@ MonoBehaviour:
     - UnityEditor.DeviceSimulation.ApplicationSettingsPlugin
     pluginStates:
     - '{}'
-    scale: 17
-    fitToScreenEnabled: 1
+    scale: 16
+    fitToScreenEnabled: 0
     rotationDegree: 0
     highlightSafeAreaEnabled: 0
     friendlyName: Apple iPhone 12 Pro Max

@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "E:\\save-the-princess\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B5F8EB77-25D6-8DA2-3548-50EC348A55FD}|Assembly-CSharp.csproj|e:\\save-the-princess\\assets\\scripts\\mainmenumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5F8EB77-25D6-8DA2-3548-50EC348A55FD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mainmenumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5F8EB77-25D6-8DA2-3548-50EC348A55FD}|Assembly-CSharp.csproj|e:\\save-the-princess\\assets\\scripts\\maprun.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5F8EB77-25D6-8DA2-3548-50EC348A55FD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\maprun.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B5F8EB77-25D6-8DA2-3548-50EC348A55FD}|Assembly-CSharp.csproj|e:\\save-the-princess\\assets\\scripts\\movementplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B5F8EB77-25D6-8DA2-3548-50EC348A55FD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\movementplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -19,14 +27,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "MainMenuManager.cs",
+              "DocumentMoniker": "E:\\save-the-princess\\Assets\\Scripts\\MainMenuManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\MainMenuManager.cs",
+              "ToolTip": "E:\\save-the-princess\\Assets\\Scripts\\MainMenuManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\MainMenuManager.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAA9wFAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T07:34:18.792Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MapRun.cs",
+              "DocumentMoniker": "E:\\save-the-princess\\Assets\\Scripts\\MapRun.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\MapRun.cs",
+              "ToolTip": "E:\\save-the-princess\\Assets\\Scripts\\MapRun.cs",
+              "RelativeToolTip": "Assets\\Scripts\\MapRun.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T07:34:17.376Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "MovementPlayer.cs",
               "DocumentMoniker": "E:\\save-the-princess\\Assets\\Scripts\\MovementPlayer.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MovementPlayer.cs",
               "ToolTip": "E:\\save-the-princess\\Assets\\Scripts\\MovementPlayer.cs",
               "RelativeToolTip": "Assets\\Scripts\\MovementPlayer.cs",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAowG4AAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAHMAAAAAAAAAAAAkwHwAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-30T08:28:03.633Z",
+              "WhenOpened": "2024-12-01T07:32:43.897Z",
               "EditorCaption": ""
             }
           ]

@@ -1,13 +1,13 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MovementPlayer : MonoBehaviour
 {
     public float laneDistance = 3f;     // Khoảng cách giữa các làn đường
     public float moveSpeed = 10f;      // Tốc độ tiến lên phía trước
     public float laneSwitchSpeed = 5f; // Tốc độ đổi làn
-    private int currentLane = 0;       // Làn đường hiện tại (-1, 0, 1)
-    public float jumpForce = 5f;       // Lực nhảy
+    private int currentLane = 1;       // Làn đường hiện tại (-1, 0, 1)
+    public float jumpForce = 6.5f;     // Lực nhảy
 
     private bool isGrounded = true;    // Trạng thái đang đứng trên mặt đất
     private bool isDragging = false;   // Trạng thái kéo chuột
@@ -22,7 +22,6 @@ public class MovementPlayer : MonoBehaviour
         rb = GetComponent<Rigidbody>(); // Lấy RigidBody của nhân vật
         if (mapRun == null) // Kiểm tra MapRun có tồn tại không
             Debug.Log("MapRun is missing!");
-
     }
 
     void Update()
@@ -36,16 +35,18 @@ public class MovementPlayer : MonoBehaviour
         // Di chuyển nhân vật theo làn đường
         Vector3 targetPosition = new Vector3(
             currentLane * laneDistance, // Xác định vị trí theo làn đường
-            rb.position.y,// Giữ nguyên độ cao
-            rb.position.z);// Tiến lên phía trước
+            rb.position.y,              // Giữ nguyên độ cao
+            rb.position.z               // Tiến lên phía trước
+        );
 
         // Chuyển động mượt mà giữa các làn đường
         Vector3 smoothedPosition = Vector3.Lerp(
             rb.position, targetPosition, // Điểm bắt đầu và kết thúc
             laneSwitchSpeed * Time.deltaTime // Tốc độ chuyển động
-            );
+        );
         rb.MovePosition(smoothedPosition);
     }
+
     void HandleSwipe()
     {
         if (Input.GetMouseButtonDown(0)) // Khi nhấn chuột
@@ -73,7 +74,7 @@ public class MovementPlayer : MonoBehaviour
                 }
             }
             // Nhảy nếu kéo lên
-            else if (difference.y > 30) // Kéo lên
+            else if (difference.y > 10) // Kéo lên
             {
                 Jump();
                 ResetSwipe();
@@ -85,7 +86,7 @@ public class MovementPlayer : MonoBehaviour
         }
     }
 
-    void ChangeLane(int direction)
+    void ChangeLane(int direction) // Đổi làn
     {
         currentLane += direction;
         Debug.Log("Switched to lane: " + currentLane);
@@ -98,7 +99,7 @@ public class MovementPlayer : MonoBehaviour
         currentTouchPosition = Vector2.zero;
     }
 
-    void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Train"))
         {
@@ -107,15 +108,18 @@ public class MovementPlayer : MonoBehaviour
 
         if (collision.gameObject.CompareTag("TrainFront") || collision.gameObject.CompareTag("Barie"))
         {
+            StopMapRun(); // Dừng map
+            Time.timeScale = 0; // Dừng toàn bộ game
             Debug.Log("Game Over!");
-            StopMapRun();
-            Time.timeScale = 0; // Dừng thời gian và kết thúc game
         }
     }
+
     void StopMapRun()
     {
         if (mapRun != null)
-            mapRun.StopMap();
+        {
+            mapRun.StopMap(); // Dừng map khi game over
+        }
     }
 
     void Jump()

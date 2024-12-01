@@ -2,7 +2,7 @@
 
 public class MapRun : MonoBehaviour
 {
-    public float mapSpeed = 5.0f; // Tốc độ di chuyển map
+    public float mapSpeed = 7f; // Tốc độ di chuyển map
     private bool isRunning = true; // Trạng thái chạy/dừng map
 
     void Update()
