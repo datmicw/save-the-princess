@@ -6,7 +6,7 @@ public class MovementPlayer : MonoBehaviour
     public float laneDistance = 3f;     // Khoảng cách giữa các làn đường
     public float moveSpeed = 10f;      // Tốc độ tiến lên phía trước
     public float laneSwitchSpeed = 5f; // Tốc độ đổi làn
-    private int currentLane = 1;       // Làn đường hiện tại (-1, 0, 1)
+    private int currentLane = -1;       // Làn đường hiện tại (-1, 0, 1)
     public float jumpForce = 6.5f;     // Lực nhảy
 
     private bool isGrounded = true;    // Trạng thái đang đứng trên mặt đất
